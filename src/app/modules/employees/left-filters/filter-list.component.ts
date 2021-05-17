@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeDetailService } from "../../services/employee-detail.service";
-import { EmployeeFilterService } from "../../services/employee-filters.service";
+import { EmployeeDetailService } from "../../../services/employee-detail.service";
+import { EmployeeFilterService } from "../../../services/employee-filters.service";
 
 @Component({
   selector: 'app-filter-list',

@@ -62,7 +62,7 @@ export class FiltersComponent implements OnInit {
 
   resetFrom(form: NgForm) {
     form.form.reset();
-    this.EmployeeDetailService.formData = new EmployeeDetail();
+    this.EmployeeDetailService.formData = new EmployeeDetail({});
   }
 
 }

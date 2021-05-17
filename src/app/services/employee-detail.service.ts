@@ -9,7 +9,7 @@ export class EmployeeDetailService {
 
   constructor(private http: HttpClient) { }
 
-  formData: EmployeeDetail = new EmployeeDetail();
+  formData: EmployeeDetail = new EmployeeDetail({});
   employeeList: EmployeeDetail[] = [];
   readonly baseUrl = "https://localhost:5001/api/Employee";
 

@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { FilterListComponent } from './content/filter-list/filter-list.component';
-import { EmployeeFiltersComponent } from './content/employee-filters/employee-filters.component';
-import { FiltersComponent } from './content/employee-filters/filters/filters.component';
-import { EmployeesComponent } from './content/employee-filters/employees/employees.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { ContentComponent } from './modules/employees/content/content.component';
+import { FilterListComponent } from './modules/employees/left-filters/filter-list.component';
+import { FiltersComponent } from './modules/employees/top-filters/filters.component';
+import { EmployeesComponent } from './modules/employees/employee-card/employees.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ContentComponent,
     FilterListComponent,
-    EmployeeFiltersComponent,
     FiltersComponent,
     EmployeesComponent
   ],
