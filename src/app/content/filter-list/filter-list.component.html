@@ -1,0 +1,26 @@
+<div class="categories">
+    <div class="departments">
+        <h3>Departments</h3>
+        <ul id="departmentList">
+            <div *ngFor="let department of departmentList">
+                <li (click)="filterByDepartment(department)">{{ department }}</li>
+            </div>
+        </ul>
+    </div>
+    <div class="offices">
+        <h3>Offices</h3>
+        <ul id="officesList">
+            <div *ngFor="let office of officeList">
+                <li (click)="filterByOffice(office)">{{ office }}</li>
+            </div>
+        </ul>
+    </div>
+    <div class="job-titles">
+        <h3>Job Titles</h3>
+        <ul id="jobTitlesList">
+            <div *ngFor="let jobTitle of jobTitleList">
+                <li (click)="filterByJobTitle(jobTitle)">{{ jobTitle }}</li>
+            </div>
+        </ul>
+    </div>
+</div>

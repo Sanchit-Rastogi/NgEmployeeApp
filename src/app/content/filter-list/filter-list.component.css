@@ -1,0 +1,16 @@
+.categories h3{
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 15px 0px;
+}
+
+.categories ul{
+    padding: 0px;
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.categories li{
+    color: #818080;
+    font-size: 12px;
+}

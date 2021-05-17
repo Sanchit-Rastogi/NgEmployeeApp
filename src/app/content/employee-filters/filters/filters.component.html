@@ -1,0 +1,100 @@
+<div class="letter-container">
+    <ul id="letters-list" class="letters">
+        <li class="bring-all-user" (click)="refreshList()"><i class="fas fa-user"></i></li>
+        <div class="alphabet" *ngFor="let alphabet of alphabets">
+            <li (click)="filterByInitial(alphabet)">{{alphabet}}</li>
+        </div>
+    </ul>
+    <div class="filter-container">
+        <div class="search-box">
+            <h2>Search</h2>
+            <input placeholder="Enter any keyword" class="search-input" type="text">
+            <i class="fas fa-search"></i>
+            <button id="clear-btn">Clear</button>
+        </div>
+        <div class="filter-box">
+            <h2>Filter by</h2>
+            <select name="employee-attribute" id="filter">
+                <option value="fName">First Name</option>
+                <option value="lName">Last Name</option>
+                <option value="pName">Preferred Name</option>
+                <option value="email">Email</option>
+                <option value="phoneNumber">Phone Number</option>
+                <option value="department">Department</option>
+                <option value="jobTitle">Job Title</option>
+                <option value="office">Office</option>
+                <option value="skypeId">Skype ID</option>
+            </select>
+        </div>
+        <button (click)="displayForm()" class="add-employee-btn" id="add-btn">Add Employee</button>
+        <div [ngClass]="formClass" id="add-employee-form">
+            <form class="form-container" name="add-employee" novalidate #form="ngForm" (submit)="onSubmit(form)">
+                <input type="hidden" name="employeeId" [value]="EmployeeDetailService.formData.employeeId" />
+                <div class="form-header">
+                    <h3>Employee Form</h3>
+                    <span (click)="hideForm()" id="close-btn"><i class="fas fa-times-circle"></i></span>
+                </div>
+                <div class="input-container">
+                    <div class="name-container">
+                        <div class="fName-container">
+                            <label for="firstName"><b>First Name</b></label>
+                            <input type="text" placeholder="Enter First Name" name="firstName" #firstName="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.firstName">
+                        </div>
+                        <div class="lName-container">
+                            <label for="lastName"><b>Last Name</b></label>
+                            <input type="text" placeholder="Enter Last Name" name="lastName" #lastName="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.lastName">
+                        </div>
+                    </div>
+                    <div class="pName-container">
+                        <label for="preferredName"><b>Preferred Name</b></label>
+                        <input type="text" placeholder="Preferred Name" name="preferredName" #preferredName="ngModel"
+                            [(ngModel)]="EmployeeDetailService.formData.preferredName">
+                    </div>
+                    <div class="contact-container">
+                        <div class="email-container">
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" placeholder="Enter Email" name="email" #email="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.email">
+                        </div>
+                        <div class="phone-container">
+                            <label for="phoneNumber"><b>Phone Number</b></label>
+                            <input type="number" placeholder="Enter Phone Number" name="phoneNumber"
+                                #phoneNumber="ngModel" [(ngModel)]="EmployeeDetailService.formData.phoneNumber">
+                        </div>
+                    </div>
+                    <div class="job-container">
+                        <div class="title-container">
+                            <label for="jobTitle"><b>Job Title</b></label>
+                            <input type="text" placeholder="Enter Job Title" name="jobTitle" #jobTitle="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.jobTitle">
+                        </div>
+                        <div class="department-container">
+                            <label for="department"><b>Department</b></label>
+                            <input type="text" placeholder="Enter Department" name="department" #department="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.department">
+                        </div>
+                    </div>
+                    <div class="office-skype-container">
+                        <div class="office-container">
+                            <label for="office"><b>Office</b></label>
+                            <input type="text" placeholder="Enter Office Location" name="office" #office="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.office">
+                        </div>
+                        <div class="skypeId-container">
+                            <label for="skypeId"><b>Skype Id</b></label>
+                            <input type="text" placeholder="Enter Skype Id" name="skypeId" #skypeId="ngModel"
+                                [(ngModel)]="EmployeeDetailService.formData.skypeId">
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <!-- <span class="form-add-btn">Add</span> -->
+                    <button class="btn btn-info btn-block" type="submit">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="note"><strong>Note:</strong> Please use advance filter options to refine your results.</p>
+</div>

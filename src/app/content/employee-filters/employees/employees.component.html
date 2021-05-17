@@ -1,0 +1,17 @@
+<div class="results">
+    <div class="profile-card" *ngFor="let emp of service.employeeList" (dblclick)="onDelete(emp.employeeId)">
+        <img src="../../../../assets/images/avatar.png">
+        <div>
+            <h3>{{ emp.firstName }} {{ emp.lastName }}</h3>
+            <h5>{{ emp.jobTitle }}</h5>
+            <h5>{{ emp.department }}</h5>
+            <span>
+                <i class="fas fa-phone-square-alt" aria-hidden="true"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <i class="fas fa-comment" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+</div>

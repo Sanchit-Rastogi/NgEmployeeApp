@@ -1,0 +1,46 @@
+.navbar-container{
+    padding-bottom: 10px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar-container .navbar-right{
+    margin-top: 15px;
+} 
+
+.navbar-left .tagline{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.tagline h1{
+    margin: 0px;
+    color: #52CAFE;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+.tagline h3{
+    margin: 0px;
+    color: #848484;
+    font-size: 18px;
+}
+
+.navbar-right h3{
+    display: inline;
+    color: #52CAFE;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.navbar-right .name{
+    color: #848484;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.navbar-right img{
+    display: inline;
+    margin-left: 10px;
+}

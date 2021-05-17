@@ -1,0 +1,41 @@
+.results{
+    border: 1px solid #818080;
+    height: 100%;
+    padding: 20px 10px;
+}
+
+.results .profile-card{
+    display: inline-flex;
+    background-color: #E7E6E6;
+    padding: 10px;
+    width: 21%;
+    height: 95px;
+    margin: 0px 10px 20px 10px;
+}
+
+.profile-card img{
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
+}
+
+.profile-card h3{
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile-card h5{
+    margin: 0px;
+    margin-bottom: 2px;
+    font-size: 10px;
+    color: #959494;
+}
+
+.profile-card i{
+    color: #959494;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
